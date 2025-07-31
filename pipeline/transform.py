@@ -13,4 +13,4 @@ def transform_flight_data(db_path):
     df = df.dropna(subset=['origin', 'dest', 'carrier', 'flight'])
 
     df.to_sql("clean_flights", con=engine, if_exists="replace", index=False)
-    print("✅ Transformation complete.")
+    print("Transformation complete.")
